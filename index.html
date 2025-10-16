@@ -1,75 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tải eSign iOS</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, sans-serif;
-      background: linear-gradient(135deg, #141e30, #243b55);
-      color: white;
-      text-align: center;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 20px;
-      padding: 30px 40px;
-      max-width: 400px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-      backdrop-filter: blur(10px);
-    }
-    h1 { font-size: 1.8rem; margin-bottom: 10px; }
-    p { color: #cfd5ff; margin-bottom: 25px; }
-    .btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #7f5af0, #2cb67d);
-      color: white;
-      padding: 14px 24px;
-      font-size: 1.1rem;
-      border-radius: 14px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 8px 25px rgba(127, 90, 240, 0.4);
-      transition: all 0.2s ease;
-    }
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 35px rgba(127, 90, 240, 0.6);
-    }
-    img {
-      width: 90px;
-      height: 90px;
-      border-radius: 22px;
-      margin-bottom: 16px;
-    }
-    footer {
-      margin-top: 30px;
-      color: #a0a7d5;
-      font-size: 0.9rem;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cài đặt ứng dụng iOS</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #1e1e2f, #25253d, #13131d, #292942);
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 40px 30px;
+  text-align: center;
+  width: 90%;
+  max-width: 380px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.app-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 22px;
+  object-fit: cover;
+  box-shadow: 0 0 30px rgba(255,255,255,0.2);
+}
+
+h1 {
+  margin: 20px 0 8px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  color: #ccc;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+button {
+  background: linear-gradient(90deg, #0b84ff, #00d4ff);
+  color: white;
+  border: none;
+  padding: 14px 38px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+button:hover {
+  box-shadow: 0 0 35px rgba(0, 212, 255, 0.8);
+  transform: scale(1.05);
+}
+
+.footer {
+  margin-top: 25px;
+  font-size: 13px;
+  color: #aaa;
+}
+</style>
+
+<script>
+function installApp() {
+  // Link mở Esign cài trực Tiếp//
+  window.location.href = "https://loadly.io/vnjes8ios";
+
+  // Nếu Esign không mở -> thông báo hướng dẫn
+  setTimeout(() => {
+    alert("⚠️ Nếu Esign không tự mở, hãy chắc rằng bạn đã cài Esign trước rồi thử lại.");
+  }, 2000);
+}
+</script>
 </head>
+
 <body>
   <div class="card">
-    <img src="c:\Users\Admin\Downloads\ESign.png" alt="eSign logo">
-    <h1>Tải eSign iOS</h1>
-    <p>Nhấn vào nút bên dưới để tải file eSign (.ipa) về từ MediaFire.</p>
-
-    <!-- 🔗 Thay link MediaFire của bạn tại đây -->
-    <a class="btn" href="https://www.mediafire.com/file/mif6ms20dmxh8hi/esign_5.0.2_unsigned.ipa/file" target="_blank">
-      📥 Tải eSign iOS
-    </a>
-
-    <footer>© 2025 eSign by <b>Pham Quang</b></footer>
+    <img src="c:\Users\Admin\Downloads\120.png" alt="App Icon" class="app-icon">
+    <h1>Cài trực Tiếp Esign V2 </h1>
+    <p>Phiên bản 1.0 · Dung lượng 120MB</p>
+    <button onclick="installApp()">Cài đặt qua Esign</button>
+    <div class="footer">© 2025 BY Pham Quang · Pham Quang by Esign</div>
   </div>
 </body>
 </html>
